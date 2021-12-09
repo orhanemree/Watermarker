@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+      <form class="flex" action="/download" method="POST" enctype="multipart/form-data">
+          <label class="file-input">
+              <span class="file-text"><i class="fas fa-upload"></i>Choose a image you want to watermark.</span>
+              <input type="file" name="input" id="input" required>
+          </label>
+          <label class="file-input">
+              <span class="file-text"><i class="fas fa-upload"></i>Choose a image as watermark.</span>
+              <input type="file" name="watermark" id="watermark" required>
+          </label>
+          <span class="number flex size">Watermark size: <input type="number" name="size" id="size" value="50" min="10" required></span>
+          <span class="number flex margin">Margin: <input type="number" name="margin" id="margin" value="5" min="0" max="100" required></span>
+          <button type="submit">Upload</button>
+      </form>
+    <!--    Font Awesome-->
+    <script src="https://kit.fontawesome.com/032e6d5919.js" crossorigin="anonymous"></script>
+</body>
+</html>

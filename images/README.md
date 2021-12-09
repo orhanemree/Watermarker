@@ -1,0 +1,1 @@
+You can delete images in this folder and put your owns.

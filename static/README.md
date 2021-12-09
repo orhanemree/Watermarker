@@ -1,0 +1,1 @@
+This folder includes images loaded from client.

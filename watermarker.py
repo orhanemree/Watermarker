@@ -17,7 +17,6 @@ def add_watermark(input_path:str, output_path:str, watermark_path:str, watermark
     transparent = Image.new("RGBA", (width, height), (0, 0, 0, 0))
     transparent.paste(image, (0, 0))
     transparent.paste(watermark, position, mask=watermark)
-    transparent.show()
     transparent.save(output_path)
 
 
