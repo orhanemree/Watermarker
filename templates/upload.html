@@ -9,17 +9,23 @@
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-      <form class="flex" action="/download" method="POST" enctype="multipart/form-data">
-          <label class="file-input">
-              <span class="file-text"><i class="fas fa-upload"></i>Choose a image you want to watermark.</span>
-              <input type="file" name="input" id="input" required>
-          </label>
-          <label class="file-input">
-              <span class="file-text"><i class="fas fa-upload"></i>Choose a image as watermark.</span>
-              <input type="file" name="watermark" id="watermark" required>
-          </label>
-          <span class="number flex size">Watermark size: <input type="number" name="size" id="size" value="50" min="10" required></span>
-          <span class="number flex margin">Margin: <input type="number" name="margin" id="margin" value="5" min="0" max="100" required></span>
+    <h2>Watermarker</h2>
+      <form action="/download" method="POST" enctype="multipart/form-data">
+          <div class="files flex">
+              <label class="file-input flex">
+                <span class="file-text"><i class="fas fa-upload"></i>Choose a image you want to watermark.</span>
+                <input type="file" name="input" id="input" required>
+              </label>
+              <label class="file-input flex">
+                  <span class="file-text"><i class="fas fa-upload"></i>Choose a image as watermark.</span>
+                  <input type="file" name="watermark" id="watermark" required>
+              </label>
+          </div>
+          <div class="options flex">
+              <span class="number flex size">Watermark size: <input type="number" name="size" id="size" value="50" min="10" required></span>
+              <span class="number flex margin">Margin: <input type="number" name="margin" id="margin" value="5" min="0" max="500" required></span>
+              <span class="number flex transparency">Transparency: <input type="number" name="transparency" id="transparency" value="150" min="1" max="255" required></span>
+          </div>
           <button type="submit">Upload</button>
       </form>
     <!--    Font Awesome-->

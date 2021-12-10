@@ -29,7 +29,7 @@ def download():
         watermark_path = path.join(static, w_filename)
         watermark.save(watermark_path)
 
-        add_watermark(input_path, input_path, watermark_path, watermark_size=(int(request.form["size"]), int(request.form["size"])), margin=int(request.form["margin"]))
+        add_watermark(input_path, input_path, watermark_path, watermark_size=int(request.form["size"]), transparency=int(request.form["transparency"]), margin=int(request.form["margin"]))
 
         return render_template("download.html", filename=path.join("static/", i_filename))
 

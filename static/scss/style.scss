@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #437979;
+    overflow: hidden;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 100%;
+    height: 100vh;
+}
+
+.files{
+    width: 100%;
+    height: 80vh;
+    gap: 50px;
+    .file-input {
+        width: 50%;
+        max-width: 500px;
+        height: 250px;
+        border: 3px dotted #000;
+        cursor: pointer;
+        border-radius: 15px;
+        font-size: 18px;
+        background-color: #548f8f;
+        i {
+            margin-right: 10px;
+            font-size: 25px;
+        }
+    }
+    input[type="file"]{
+        display: none;
+    }
+}
+
+.options, button[type="submit"], h2{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+
+}
+
+.options{
+    top: 70%;
+    gap: 20px;
+    .number{
+        gap: 5px;
+    }
+}
+
+button[type="submit"], input[type="number"]{
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #000;
+}
+
+button[type="submit"]{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+h2{
+    text-align: center;
+    top: 70px;
+}
+
+.output{
+    width: 500px;
+    margin: 80px auto 0;
+    display: block;
+    padding: 20px;
+    @media screen and (max-width: 480px){
+        width: 95%;
+    }
+}
+
+.links{
+    gap: 40px;
+    a{
+        font-size: 18px;
+        color: #000;
+    }
+}

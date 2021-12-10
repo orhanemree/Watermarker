@@ -1,0 +1,23 @@
+{
+  "name": "watermarker",
+  "version": "1.0.0",
+  "description": "💯 Watermark your images with one line of command",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass static/scss/style.scss static/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orhanemree/Watermarker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orhanemree/Watermarker/issues"
+  },
+  "homepage": "https://github.com/orhanemree/Watermarker#readme",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  }
+}

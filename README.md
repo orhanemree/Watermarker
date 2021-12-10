@@ -14,7 +14,7 @@ $ python watermarker.py --help
 
 #### 📎 Args
 ````bash
-usage: watermarker.py [-h] -i INPUT_PATH -o OUTPUT_PATH -w WATERMARK_PATH [-s WATERMARK_SIZE [WATERMARK_SIZE ...]] [-m MARGIN]
+usage: watermarker.py [-h] -i INPUT_PATH -o OUTPUT_PATH -w WATERMARK_PATH [-s WATERMARK_SIZE] [-t TRANSPARENCY] [-m MARGIN]
 
 Add watermark to your images
 
@@ -26,15 +26,18 @@ optional arguments:
                         output image path
   -w WATERMARK_PATH, --watermark_path WATERMARK_PATH
                         output image path
-  -s WATERMARK_SIZE [WATERMARK_SIZE ...], --watermark_size WATERMARK_SIZE [WATERMARK_SIZE ...]
-                        watermark sizes (default=(50, 50))
+  -s WATERMARK_SIZE, --watermark_size WATERMARK_SIZE
+                        watermark size (default=50)
+  -t TRANSPARENCY, --transparency TRANSPARENCY
+                        transparency (default=150)
   -m MARGIN, --margin MARGIN
                         margin (default=5)
+
 ````
 
 #### 🔎 Example
 ````bash
-$ python watermarker.py -i "images/input.png" -o "images/output.png" -w "images/watermark.png" -s 70 70 -m 100
+$ python watermarker.py -i "images/input.png" -o "images/output.png" -w "images/watermark.png" -s 100 -t 200 -m 50
 ````
 
 ### 🌐 From Local Web Server
@@ -47,7 +50,9 @@ $ python app.py
 
 Now, your local Watermarker is running on http://localhost:5000/upload
 
-* I couldn't make it into production mode because I'm not sure about the safety of the images.
+## ☑️ Todo
+* [x] Add transparency option.
+* [ ] Get ready to production mode.
 
 ## 📃 License
 * This project is licensed under the [MIT License](https://github.com/orhanemree/Watermarker/blob/master/LICENSE).
