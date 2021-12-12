@@ -8,6 +8,7 @@
 
 ````bash
 $ git clone https://github.com/orhanemree/Watermarker.git
+$ cd Watermarker
 $ pip3 install -r requirements.txt
 $ python watermarker.py --help
 ````
@@ -44,6 +45,7 @@ $ python watermarker.py -i "images/input.png" -o "images/output.png" -w "images/
 
 ````bash
 $ git clone https://github.com/orhanemree/Watermarker.git
+$ cd Watermarker
 $ pip3 install -r requirements.txt
 $ python app.py
 ````
