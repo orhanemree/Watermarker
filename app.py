@@ -14,24 +14,15 @@ def upload():
 def download():
     if request.method == "POST":
 
-        basedir = path.abspath(path.dirname(__file__))
-        static = path.join(basedir, app.config["UPLOAD_FOLDER"])
-
         # input image
         input = request.files["input"]
-        i_filename = f"upload.{input.filename.split('.')[1]}"
-        input_path = path.join(static, i_filename)
-        input.save(input_path)
 
         # watermark image
         watermark = request.files["watermark"]
-        w_filename = f"watermark.{watermark.filename.split('.')[1]}"
-        watermark_path = path.join(static, w_filename)
-        watermark.save(watermark_path)
 
-        add_watermark(input_path, input_path, watermark_path, watermark_size=int(request.form["size"]), transparency=int(request.form["transparency"]), margin=int(request.form["margin"]))
+        filename = add_watermark(input, watermark, watermark_size=int(request.form["size"]), transparency=int(request.form["transparency"]), margin=int(request.form["margin"]))
 
-        return render_template("download.html", filename=path.join("static/", i_filename))
+        return render_template("download.html", filename=filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
